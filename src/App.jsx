@@ -315,6 +315,16 @@ export default function App() {
           animation: shine 7s linear infinite;
           pointer-events: none;
         }
+        .hero-photo {
+          width: 240px;
+          height: 240px;
+          object-fit: cover;
+          object-position: center; /* ensures face is centered */
+          border-radius: 50%; /* optional, gives a circular shape */
+          display: block;
+          margin: 0 auto; /* centers horizontally */
+        }
+
 
         .countdown-box {
           background: linear-gradient(180deg, #fffaf0 0%, #fff4df 100%);
@@ -453,13 +463,7 @@ export default function App() {
 
         <audio ref={audioRef} src={musicUrl} />
 
-        <button
-            onClick={toggleSound}
-            className="fixed right-4 top-4 z-50 flex items-center gap-2 rounded-full border border-[#c49a38] bg-white/90 px-4 py-2 text-sm shadow-lg backdrop-blur"
-        >
-          {isPlaying ? <VolumeX size={18} /> : <Volume2 size={18} />}
-          <span>{isPlaying ? "Музыканы өшіру" : "Музыканы қосу"}</span>
-        </button>
+
 
         <section
             ref={(el) =>
@@ -490,7 +494,7 @@ export default function App() {
                 style={{ fontSize: "24px" }}
                 className="hero-kicker mb-3 text-xl italic tracking-wide text-[#9b7745]"
             >
-              Әкеміз, атамыз
+              Әкеміз
             </p>
 
             <h1 className="gold-text hero-title mb-6 text-center text-[2.3rem] font-semibold leading-[1.2] sm:text-5xl">
@@ -509,11 +513,11 @@ export default function App() {
             </p>
 
             <button
-                onClick={() => scrollToNext(0)}
-                className="mx-auto mt-10 flex items-center gap-2 rounded-full border border-[#c49a38] px-5 py-2 text-sm tracking-wide transition hover:bg-[#fff3d4]"
+                onClick={toggleSound}
+                className="fixed right-4 top-4 z-50 flex items-center gap-2 rounded-full border border-[#c49a38] bg-white/90 px-4 py-2 text-sm shadow-lg backdrop-blur"
             >
-              Төмен сырғыту
-              <ChevronDown size={16} />
+              {isPlaying ? <VolumeX size={18} /> : <Volume2 size={18} />}
+              <span>{isPlaying ? "Музыканы өшіру" : "Музыканы қосу"}</span>
             </button>
           </motion.div>
         </section>
@@ -765,7 +769,7 @@ export default function App() {
 
               <button
                   type="submit"
-                  className="submit-button w-full max-w-xl mx-auto rounded-full px-10 py-5 text-xl font-semibold text-white shadow-lg transition hover:scale-[1.02]"
+                  className="submit-button w-full max-w-xl mx-auto rounded-full px-20 py-10 text-xl font-semibold text-white shadow-lg transition hover:scale-[1.02]"
               >
                 <b>Жіберу</b>
               </button>
