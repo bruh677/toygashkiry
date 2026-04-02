@@ -391,7 +391,9 @@ export default function App() {
         }
 
         .submit-button {
-          background: linear-gradient(to right, #8e5f13, #d7b55b, #8e5f13);
+          display: inline-block;
+          padding: 16px 40px;
+          font-size: 18px;
         }
 
         .section-card {
