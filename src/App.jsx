@@ -806,7 +806,7 @@ export default function App() {
                     className="mt-2 h-5 w-5 accent-[#b4872f]"
                 />
                 <span className="detail-text text-base leading-7 text-[#6f4d31]">
-                bum shaka laka bum bum shaka bum bum
+                Өкінішке орай, келе алмаймын
               </span>
               </label>
               <br />
