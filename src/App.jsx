@@ -477,13 +477,14 @@ export default function App() {
 
                 <div className="bg-white rounded-[2rem] p-3 shadow-[0_20px_40px_rgba(120,83,16,0.18)]">
 
-                  <div className="h-[200px] w-[100px] overflow-hidden rounded-[1.5rem] sm:h-[200px] sm:w-[50px]">
+                  <div className="h-[420px] w-[300px] flex items-center justify-center overflow-hidden rounded-[1.5rem] bg-white sm:h-[500px] sm:w-[340px]">
                     <img
                         src={photoUrl}
                         alt="Мерейтой иесі"
-                        className="h-full w-full object-contain bg-white"
+                        className="h-full w-full object-cover"
                         style={{
-                          objectPosition: "center 20%",
+                          objectPosition: "52% 22%",
+                          transform: "scale(1.18)",
                         }}
                     />
                   </div>
