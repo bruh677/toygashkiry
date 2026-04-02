@@ -809,7 +809,7 @@ export default function App() {
 
               <button
                   type="submit"
-                  className="submit-button w-full max-w-xl mx-auto rounded-full px-20 py-10 text-xl font-semibold text-white shadow-lg transition hover:scale-[1.02]"
+                  className="submit-button w-full max-w-lg mx-auto rounded-full px-10 py-5 text-xl font-semibold text-white shadow-lg transition hover:scale-[1.02]"
               >
                 <b>Жіберу</b>
               </button>
