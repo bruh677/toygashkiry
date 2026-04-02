@@ -477,9 +477,9 @@ export default function App() {
                 <img
                     src={photoUrl}
                     alt="Мерейтой иесі"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
                     style={{
-                      objectPosition: "center center",
+                      objectPosition: "50% 20%",
                       animation: "slowZoom 12s ease-in-out infinite alternate",
                     }}
                 />
