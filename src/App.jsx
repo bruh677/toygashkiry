@@ -494,7 +494,7 @@ export default function App() {
               Әкеміз, атамыз
             </p>
 
-            <h1 className="gold-text hero-title mb-6 text-center text-[3rem] font-semibold leading-[1.2] sm:text-5xl">
+            <h1 className="gold-text hero-title mb-6 text-center text-[1rem] font-semibold leading-[1.2] sm:text-5xl">
               <b>
                 Сейдікәрімнің
                 <br />
