@@ -374,8 +374,9 @@ export default function App() {
 
         .radio-card {
           display: flex;
-          gap: 12px;
-          align-items: flex-start;
+          justify-content: flex-start; /* Pushes everything to the left */
+          align-items: center;        /* Keeps the dot level with the text */
+          gap: 12px;  
           border-radius: 20px;
           border: 1px solid rgba(196, 148, 45, 0.28);
           background: #fffaf0;
