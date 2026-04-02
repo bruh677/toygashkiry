@@ -303,7 +303,7 @@ export default function App() {
         }
 
         .luxury-card {
-          overflow: hidden;
+           overflow: visible;
         }
 
         .luxury-card::before {
@@ -472,25 +472,21 @@ export default function App() {
               transition={{ duration: 0.9 }}
               className="ornament-corner ornament-corner-bottom gold-border luxury-card section-card relative text-center"
           >
-            <div className="mx-auto mb-10 flex justify-center">
+            <div className="mx-auto mb-8 flex justify-center">
               <div className="ornament-ring relative p-[6px] rounded-[2.5rem]">
-
                 <div className="bg-white rounded-[2rem] p-3 shadow-[0_20px_40px_rgba(120,83,16,0.18)]">
-
-                  <div className="h-[4px] w-[3px] flex items-center justify-center overflow-hidden rounded-[1.5rem] bg-white sm:h-[5px] sm:w-[3px]">
+                  <div className="h-[360px] w-[320px] overflow-hidden rounded-[1.5rem] bg-white sm:h-[420px] sm:w-[380px]">
                     <img
                         src={photoUrl}
                         alt="Мерейтой иесі"
                         className="h-full w-full object-cover"
                         style={{
-                          objectPosition: "25% 22%",
-                          transform: "scale(1.18)",
+                          objectPosition: "50% 18%",
+                          transform: "scale(1)",
                         }}
                     />
                   </div>
-
                 </div>
-
               </div>
             </div>
 
