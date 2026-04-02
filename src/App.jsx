@@ -472,38 +472,39 @@ export default function App() {
               transition={{ duration: 0.9 }}
               className="ornament-corner ornament-corner-bottom gold-border luxury-card section-card relative text-center"
           >
-            <div className="mx-auto mb-8 flex justify-center">
-              <div className="ornament-ring relative p-[6px] rounded-[2.5rem]">
-                <div className="bg-white rounded-[2rem] p-3 shadow-[0_20px_40px_rgba(120,83,16,0.18)]">
-                  <div className="h-[360px] w-[320px] overflow-hidden rounded-[1.5rem] bg-white sm:h-[420px] sm:w-[380px]">
+            <div className="hero-photo-shell mx-auto mb-8 flex justify-center">
+              <div className="ornament-ring relative rounded-[2.5rem] p-[6px]">
+                <div className="hero-photo-frame">
+                  <div className="hero-photo-box">
                     <img
                         src={photoUrl}
                         alt="Мерейтой иесі"
-                        className="h-full w-full object-cover"
-                        style={{
-                          objectPosition: "50% 18%",
-                          transform: "scale(1)",
-                        }}
+                        className="hero-photo"
                     />
                   </div>
                 </div>
               </div>
             </div>
 
-            <p style = {{fontSize: "24px"}} className="mb-3 text-xl italic tracking-wide text-[#9b7745]">
+            <p
+                style={{ fontSize: "24px" }}
+                className="hero-kicker mb-3 text-xl italic tracking-wide text-[#9b7745]"
+            >
               Әкеміз, атамыз
             </p>
 
-            <h1 className="gold-text hero-title mb-4 text-center text-[2.65rem] font-semibold leading-[1.08] sm:text-5xl">
-              <b>Сейдікәрімнің
-                <br /><br />
-                80 жас мерейтойы</b>
+            <h1 className="gold-text hero-title mb-6 text-center text-[2.3rem] font-semibold leading-[1.2] sm:text-5xl">
+              <b>
+                Сейдікәрімнің
+                <br />
+                80 жас мерейтойы
+              </b>
             </h1>
 
-            <br />
-            <br />
-
-            <p style = {{fontSize: "24px"}} className="main-text mx-auto max-w-md text-lg leading-8 text-[#7b5b38]">
+            <p
+                style={{ fontSize: "24px" }}
+                className="hero-desc main-text mx-auto max-w-md text-lg leading-8 text-[#7b5b38]"
+            >
               Қуанышымызға ортақ болып, ақ тілегіңізбен төрімізден орын алыңыз.
             </p>
 
