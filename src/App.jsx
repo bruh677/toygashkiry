@@ -70,7 +70,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const eventDate = new Date("2026-05-24T14:00:00");
+    const eventDate = new Date("2026-05-23T14:00:00");
 
     const updateCountdown = () => {
       const now = new Date();
