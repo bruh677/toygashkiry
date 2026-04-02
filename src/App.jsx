@@ -483,7 +483,7 @@ export default function App() {
                         alt="Мерейтой иесі"
                         className="h-full w-full object-cover"
                         style={{
-                          objectPosition: "52% 22%",
+                          objectPosition: "25% 22%",
                           transform: "scale(1.18)",
                         }}
                     />
