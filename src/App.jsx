@@ -594,7 +594,7 @@ export default function App() {
                   <p  style={{ fontSize: "24px" }} className="text-sm uppercase tracking-[0.18em] text-[#a47a2f]">
                     Күні
                   </p>
-                  <p style={{ fontSize: "24px" }} className="mt-1 text-xl font-semibold"><b>24.05.2026</b></p>
+                  <p style={{ fontSize: "24px" }} className="mt-1 text-xl font-semibold"><b>23.05.2026</b></p>
                 </div>
               </div>
 
@@ -604,7 +604,7 @@ export default function App() {
                   <p style={{ fontSize: "24px" }} className="text-sm uppercase tracking-[0.18em] text-[#a47a2f]">
                     Уақыты
                   </p>
-                  <p style={{ fontSize: "24px" }} className="mt-1 text-xl font-semibold"><b>14:00</b></p>
+                  <p style={{ fontSize: "24px" }} className="mt-1 text-xl font-semibold"><b>13:00</b></p>
                 </div>
               </div>
 
@@ -672,7 +672,7 @@ export default function App() {
                 {mayCalendarDays.flat().map((day, index) => (
                     <div
                         key={`${day}-${index}`}
-                        className={`calendar-cell ${day === 24 ? "calendar-active" : ""}`}
+                        className={`calendar-cell ${day === 23 ? "calendar-active" : ""}`}
                     >
                       {day}
                     </div>
