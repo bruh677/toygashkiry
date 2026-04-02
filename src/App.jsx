@@ -481,7 +481,7 @@ export default function App() {
                     <img
                         src={photoUrl}
                         alt="Мерейтой иесі"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-contain bg-white"
                         style={{
                           objectPosition: "center 20%",
                         }}
