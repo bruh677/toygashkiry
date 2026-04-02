@@ -472,19 +472,24 @@ export default function App() {
               transition={{ duration: 0.9 }}
               className="ornament-corner ornament-corner-bottom gold-border luxury-card section-card relative text-center"
           >
-            <div className="mx-auto mb-8 flex justify-center">
-              <div className="ornament-ring relative mx-auto h-[50px] w-[100px] overflow-hidden rounded-[2rem] bg-white sm:h-[100px] sm:w-[150px]">
-                <img
-                    src={photoUrl}
-                    alt="Мерейтой иесі"
-                    className="h-full w-full object-contain"
-                    style={{
-                      objectPosition: "50% 20%",
-                      animation: "slowZoom 12s ease-in-out infinite alternate",
-                    }}
-                />
-                <div className="pointer-events-none absolute inset-0 rounded-[2rem] shadow-[0_0_40px_rgba(212,177,89,0.35)]" />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#fcfaf6] via-transparent to-transparent" />
+            <div className="mx-auto mb-10 flex justify-center">
+              <div className="ornament-ring relative p-[6px] rounded-[2.5rem]">
+
+                <div className="bg-white rounded-[2rem] p-3 shadow-[0_20px_40px_rgba(120,83,16,0.18)]">
+
+                  <div className="h-[420px] w-[300px] overflow-hidden rounded-[1.5rem] sm:h-[500px] sm:w-[340px]">
+                    <img
+                        src={photoUrl}
+                        alt="Мерейтой иесі"
+                        className="h-full w-full object-cover"
+                        style={{
+                          objectPosition: "center 20%",
+                        }}
+                    />
+                  </div>
+
+                </div>
+
               </div>
             </div>
 
