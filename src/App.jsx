@@ -477,7 +477,7 @@ export default function App() {
 
                 <div className="bg-white rounded-[2rem] p-3 shadow-[0_20px_40px_rgba(120,83,16,0.18)]">
 
-                  <div className="h-[420px] w-[300px] overflow-hidden rounded-[1.5rem] sm:h-[500px] sm:w-[340px]">
+                  <div className="h-[200px] w-[100px] overflow-hidden rounded-[1.5rem] sm:h-[300px] sm:w-[140px]">
                     <img
                         src={photoUrl}
                         alt="Мерейтой иесі"
