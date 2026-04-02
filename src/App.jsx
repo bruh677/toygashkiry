@@ -802,7 +802,7 @@ export default function App() {
                     value="Өкінішке орай, келе алмаймын"
                     checked={attendance === "Өкінішке орай, келе алмаймын"}
                     onChange={(e) => setAttendance(e.target.value)}
-                    className="mt-1 h-4 w-4 accent-[#b4872f]"
+                    className="mt-2 h-5 w-5 accent-[#b4872f]"
                 />
                 <span className="detail-text text-base leading-7 text-[#6f4d31]">
                 Өкінішке орай, келе алмаймын
