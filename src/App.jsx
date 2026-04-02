@@ -494,12 +494,10 @@ export default function App() {
               Әкеміз, атамыз
             </p>
 
-            <h1 className="gold-text hero-title mb-6 text-center text-[1rem] font-semibold leading-[1.2] sm:text-5xl">
-              <b>
-                Сейдікәрімнің
-                <br />
-                80 жас мерейтойы
-              </b>
+            <h1 className="gold-text hero-title mb-4 text-center text-[2.65rem] font-semibold leading-[1.08] sm:text-5xl">
+              <b>Сейдікәрімнің
+                <br /><br />
+                80 жас мерейтойы</b>
             </h1>
 
             <br />
