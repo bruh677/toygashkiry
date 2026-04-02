@@ -21,7 +21,7 @@ export default function App() {
       "https://www.dropbox.com/scl/fi/f11vwl4tmelvxsfrz852k/Dombyra_-_Ku_bol_-SkySound.cc.mp3?rlkey=l3bm484d4cnvr0l6vyh17gv7u&st=00c58o7i&raw=1";
 
   const photoUrl =
-      "https://www.dropbox.com/scl/fi/z2h1w4ydp7c3h2rosbbg1/14d715a8-319e-485e-b52e-7808dedb055c.png?rlkey=qg7d4wbh1hv4tkmh7w4mfke7k&st=3ua92eya&dl=1";
+      "https://www.dropbox.com/scl/fi/z2h1w4ydp7c3h2rosbbg1/14d715a8-319e-485e-b52e-7808dedb055c.png?rlkey=qg7d4wbh1hv4tkmh7w4mfke7k&st=3ua92eya&raw=1";
 
   const mapPhotoUrl =
       "https://www.dropbox.com/scl/fi/wrb2lt6ks8ndtosvaqd8p/2026-04-02-00.01.54.png?rlkey=9yxx7dw3wns63b2inddlj2rox&st=q6d7dj0v&dl=0";
