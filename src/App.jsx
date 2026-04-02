@@ -681,6 +681,46 @@ export default function App() {
             </div>
           </motion.div>
         </section>
+
+        <section
+            ref={(el) => (sectionsRef.current[5] = el)}
+            className="snap-section soft-pattern"
+        >
+          <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.35 }}
+              transition={{ duration: 0.8 }}
+              className="gold-border luxury-card section-card relative text-center"
+          >
+            <h2 style={{ fontSize: "24px" }} className="gold-text large-section-title mb-5 text-3xl font-semibold">
+              <b>Карта</b>
+            </h2>
+
+            <p className="main-text mx-auto max-w-md text-lg leading-8 text-[#6f4d31]">
+              Сіздерге ыңғайлы болу үшін төмендегі картаны қолданыңыз.
+            </p>
+
+            <a href={mapLink} target="_blank" rel="noreferrer" className="my-8 block">
+              <img
+                  src={mapPhotoUrl}
+                  alt="Той өтетін жер картасы"
+                  className="map-image shadow-sm"
+              />
+            </a>
+
+            <a
+                href={mapLink}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex rounded-full bg-gradient-to-r from-[#8e5f13] via-[#d7b55b] to-[#8e5f13] px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:scale-[1.02]"
+            >
+              2GIS картасын ашу
+            </a>
+          </motion.div>
+        </section>
+
+
         <section
             ref={(el) => (sectionsRef.current[4] = el)}
             className="snap-section soft-pattern"
@@ -791,43 +831,7 @@ export default function App() {
           </motion.div>
         </section>
 
-        <section
-            ref={(el) => (sectionsRef.current[5] = el)}
-            className="snap-section soft-pattern"
-        >
-          <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.35 }}
-              transition={{ duration: 0.8 }}
-              className="gold-border luxury-card section-card relative text-center"
-          >
-            <h2 style={{ fontSize: "24px" }} className="gold-text large-section-title mb-5 text-3xl font-semibold">
-              <b>Карта</b>
-            </h2>
 
-            <p className="main-text mx-auto max-w-md text-lg leading-8 text-[#6f4d31]">
-              Сіздерге ыңғайлы болу үшін төмендегі картаны қолданыңыз.
-            </p>
-
-            <a href={mapLink} target="_blank" rel="noreferrer" className="my-8 block">
-              <img
-                  src={mapPhotoUrl}
-                  alt="Той өтетін жер картасы"
-                  className="map-image shadow-sm"
-              />
-            </a>
-
-            <a
-                href={mapLink}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex rounded-full bg-gradient-to-r from-[#8e5f13] via-[#d7b55b] to-[#8e5f13] px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:scale-[1.02]"
-            >
-              2GIS картасын ашу
-            </a>
-          </motion.div>
-        </section>
       </div>
   );
 }
