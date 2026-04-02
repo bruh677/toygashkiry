@@ -473,7 +473,7 @@ export default function App() {
               className="ornament-corner ornament-corner-bottom gold-border luxury-card section-card relative text-center"
           >
             <div className="mx-auto mb-8 flex justify-center">
-              <div className="ornament-ring relative mx-auto h-[300px] w-[300px] overflow-hidden rounded-[2rem] bg-white sm:h-[380px] sm:w-[380px]">
+              <div className="ornament-ring relative mx-auto h-[50px] w-[100px] overflow-hidden rounded-[2rem] bg-white sm:h-[100px] sm:w-[150px]">
                 <img
                     src={photoUrl}
                     alt="Мерейтой иесі"
