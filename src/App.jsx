@@ -100,20 +100,27 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    let currentIndex = 0;
+
     const slideTimer = setInterval(() => {
-      setCurrentSection((prev) => {
+      if (userHasScrolled.current) {
+        clearInterval(slideTimer);
+        return;
+      }
 
-        if (userHasScrolled.current) return prev; // 🔥 STOP forever
+      if (currentIndex >= sections.length - 1) {
+        clearInterval(slideTimer);
+        return;
+      }
 
-        const next = (prev + 1) % sections.length;
+      currentIndex += 1;
 
-        sectionsRef.current[next]?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-
-        return next;
+      sectionsRef.current[currentIndex]?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
+
+      setCurrentSection(currentIndex);
     }, 6500);
 
     return () => clearInterval(slideTimer);
@@ -181,15 +188,65 @@ export default function App() {
   ];
 
   return (
-      <div className="min-h-screen bg-[#f8f5ef] text-[#6e4b2f] selection:bg-yellow-200/60">
+      <div className="invite-page text-[#6e4b2f] selection:bg-yellow-200/60">
         <style>{`
         html {
           scroll-behavior: smooth;
         }
-
+        
         body {
-          background: #f8f5ef;
+          margin: 0;
+          background:
+            radial-gradient(circle at 20% 20%, rgba(212, 177, 89, 0.08), transparent 20%),
+            radial-gradient(circle at 80% 10%, rgba(212, 177, 89, 0.08), transparent 18%),
+            radial-gradient(circle at 50% 100%, rgba(212, 177, 89, 0.08), transparent 24%),
+            linear-gradient(180deg, #f8f5ef 0%, #f6f1e7 100%);
           font-family: "Caslon No 540 D", "Adobe Caslon Pro", "Big Caslon", Georgia, serif;
+        }
+        
+        .invite-page {
+          position: relative;
+          min-height: 100vh;
+          overflow-x: hidden;
+        }
+        
+        .invite-page::before {
+          content: "";
+          position: fixed;
+          inset: 0;
+          pointer-events: none;
+          z-index: 0;
+          background:
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%23c79b3b' stroke-opacity='0.13' stroke-width='2'%3E%3Cpath d='M40 20c14 0 26 12 26 26M180 20c-14 0-26 12-26 26M40 200c14 0 26-12 26-26M180 200c-14 0-26-12-26-26'/%3E%3Cpath d='M92 40c10 10 26 10 36 0M92 180c10-10 26-10 36 0M40 92c10 10 10 26 0 36M180 92c-10 10-10 26 0 36'/%3E%3C/g%3E%3C/svg%3E") repeat;
+          opacity: 1;
+        }
+        
+        .snap-section {
+          position: relative;
+          z-index: 1;
+          min-height: 100svh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 36px 18px;
+        }
+        
+        .section-plain {
+          width: 100%;
+          max-width: 760px;
+          text-align: center;
+          padding: 12px 8px;
+        }
+        
+        .section-plain.left {
+          text-align: left;
+        }
+        
+        .section-divider {
+          width: 140px;
+          height: 1px;
+          margin: 22px auto;
+          background: linear-gradient(to right, transparent, #c9a04b, transparent);
         }
 
         * {
@@ -292,14 +349,6 @@ export default function App() {
             radial-gradient(circle at 20% 20%, rgba(212, 177, 89, 0.08), transparent 32%),
             radial-gradient(circle at 80% 0%, rgba(212, 177, 89, 0.08), transparent 28%),
             radial-gradient(circle at 50% 100%, rgba(212, 177, 89, 0.08), transparent 26%);
-        }
-
-        .snap-section {
-          min-height: 100svh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 16px;
         }
 
         .luxury-card {
@@ -478,7 +527,7 @@ export default function App() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9 }}
-              className="ornament-corner ornament-corner-bottom gold-border luxury-card section-card relative text-center"
+              className="section-plain relative text-center"
           >
             <div className="hero-photo-shell mx-auto mb-8 flex justify-center">
               <div className="ornament-ring relative rounded-[2.5rem] p-[6px]">
@@ -585,7 +634,7 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.35 }}
               transition={{ duration: 0.8 }}
-              className="gold-border luxury-card section-card relative"
+              className="section-plain relative"
           >
             <h2 style={{ fontSize: "32px" }} className="gold-text large-section-title mb-8 text-center text-3xl font-semibold">
               <b>Той салтанаты</b>
@@ -650,7 +699,7 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.35 }}
               transition={{ duration: 0.8 }}
-              className="gold-border luxury-card section-card relative"
+              className="section-plain relative"
           >
             <h2 style={{ fontSize: "24px" }} className="gold-text large-section-title mb-6 text-center text-3xl font-semibold">
               <b>Күнтізбе</b>
@@ -734,7 +783,7 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.35 }}
               transition={{ duration: 0.8 }}
-              className="gold-border luxury-card section-card relative"
+              className="section-plain relative"
           >
             <h2 style={{ fontSize: "36px" }} className="gold-text large-section-title mb-4 text-center text-3xl font-semibold">
               <b>Қатысуыңызды растау</b>
