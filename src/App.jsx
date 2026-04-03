@@ -47,7 +47,7 @@ export default function App() {
   const [submitted, setSubmitted] = useState(false);
 
   const sections = useMemo(
-      () => ["hero", "invite", "calendar", "details", "poll", "location"],
+      () => ["hero", "invite", "details", "calendar", "location", "poll"],
       []
   );
   useEffect(() => {
@@ -584,7 +584,7 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.35 }}
               transition={{ duration: 0.8 }}
-              className="gold-border luxury-card section-card relative text-center"
+              className="section-plain relative"
           >
             <div className="mb-6 flex items-center justify-center gap-2 text-[#b4872f]">
               <Heart size={18} fill="currentColor" />
@@ -626,7 +626,7 @@ export default function App() {
 
 
         <section
-            ref={(el) => (sectionsRef.current[3] = el)}
+            ref={(el) => (sectionsRef.current[2] = el)}
             className="snap-section soft-pattern"
         >
           <motion.div
@@ -691,7 +691,7 @@ export default function App() {
 
 
         <section
-            ref={(el) => (sectionsRef.current[2] = el)}
+            ref={(el) => (sectionsRef.current[3] = el)}
             className="snap-section soft-pattern"
         >
           <motion.div
@@ -736,7 +736,7 @@ export default function App() {
         </section>
 
         <section
-            ref={(el) => (sectionsRef.current[5] = el)}
+            ref={(el) => (sectionsRef.current[4] = el)}
             className="snap-section soft-pattern"
         >
           <motion.div
@@ -744,7 +744,7 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.35 }}
               transition={{ duration: 0.8 }}
-              className="gold-border luxury-card section-card relative text-center"
+              className="section-plain relative"
           >
             <h2 style={{ fontSize: "24px" }} className="gold-text large-section-title mb-5 text-3xl font-semibold">
               <b>Карта</b>
@@ -775,7 +775,7 @@ export default function App() {
 
 
         <section
-            ref={(el) => (sectionsRef.current[4] = el)}
+            ref={(el) => (sectionsRef.current[5] = el)}
             className="snap-section soft-pattern"
         >
           <motion.div
