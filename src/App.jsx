@@ -224,11 +224,9 @@ export default function App() {
         .snap-section {
           position: relative;
           z-index: 1;
-          min-height: 100svh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 36px 18px;
+          min-height: auto;
+          display: block;
+          padding: 14px 18px;
         }
         
         .section-plain {
@@ -591,17 +589,15 @@ export default function App() {
               <Heart size={18} fill="currentColor" />
               <Heart size={18} fill="currentColor" />
             </div>
+            <p className="main-text text-lg leading-8 text-[#6f4d31]">Құрметті ағайын-туыс, нағашы жиен, бөлелер, құда-жекжат, бауырлар,
+              жора-жолдас, дос-жарандар, әріптестер, құрдастар мен жақындар!</p>
 
-            <p
-                style={{ fontSize: "24px" }}
-                className="main-text text-lg leading-8 text-[#6f4d31]"
-            >
-              Құрметті ағайын-туыс, нағашы жиен, бөлелер, құда-жекжат, бауырлар,
-              жора-жолдас, дос-жарандар, әріптестер, құрдастар мен жақындар!
-            </p>
 
-            <br />
-            <br />
+            /**
+            <div className="mx-auto my-4 h-px w-24 bg-gradient-to-r from-transparent via-[#c9a04b] to-transparent" />
+
+            <p className="main-text text-lg leading-8 text-[#6f4d31]">text</p> */
+
 
             <div className="mx-auto my-6 h-px w-24 bg-gradient-to-r from-transparent via-[#c9a04b] to-transparent" />
 
